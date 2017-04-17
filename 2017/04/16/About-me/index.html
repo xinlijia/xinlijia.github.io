@@ -232,15 +232,15 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <%- toc(post.content) %>
+    <strong class="toc-title">Contents</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Profile"><span class="toc-number">1.</span> <span class="toc-text">Profile</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Name"><span class="toc-number">1.1.</span> <span class="toc-text">Name</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Email"><span class="toc-number">1.2.</span> <span class="toc-text">Email</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tel"><span class="toc-number">1.3.</span> <span class="toc-text">Tel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Addr"><span class="toc-number">1.4.</span> <span class="toc-text">Addr</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Education"><span class="toc-number">2.</span> <span class="toc-text">Education</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Columbia-University"><span class="toc-number">2.1.</span> <span class="toc-text">Columbia University</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shanghai-Jiao-Tong-University"><span class="toc-number">2.2.</span> <span class="toc-text">Shanghai Jiao Tong University</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Skills"><span class="toc-number">3.</span> <span class="toc-text">Skills</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Programming-Language"><span class="toc-number">3.1.</span> <span class="toc-text">Programming Language</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operating-System"><span class="toc-number">3.2.</span> <span class="toc-text">Operating System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web"><span class="toc-number">3.3.</span> <span class="toc-text">Web</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Database"><span class="toc-number">3.4.</span> <span class="toc-text">Database</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Projects"><span class="toc-number">4.</span> <span class="toc-text">Projects</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IN-CAR-MUSIC-RECOMMENDER"><span class="toc-number">4.1.</span> <span class="toc-text">IN-CAR MUSIC RECOMMENDER</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PREDICTING-STOCK-MOVEMENT"><span class="toc-number">4.2.</span> <span class="toc-text">PREDICTING STOCK MOVEMENT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#COORDINATE-SYSTEM-GRAPHER-LANGUAGE"><span class="toc-number">4.3.</span> <span class="toc-text">COORDINATE SYSTEM GRAPHER LANGUAGE</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Experience"><span class="toc-number">5.</span> <span class="toc-text">Experience</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#INTERN-LOGIC-SOLUTIONS"><span class="toc-number">5.1.</span> <span class="toc-text">INTERN - LOGIC SOLUTIONS</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Research"><span class="toc-number">6.</span> <span class="toc-text">Research</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CROWDSOURCED-INDOOR-LOCALIZATION-BASED-ON-WIFI-SIGNALS"><span class="toc-number">6.1.</span> <span class="toc-text">CROWDSOURCED INDOOR LOCALIZATION BASED ON WIFI SIGNALS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-NOVEL-FACE-RECOGNITION-ALGORITHM"><span class="toc-number">6.2.</span> <span class="toc-text">A NOVEL FACE RECOGNITION ALGORITHM</span></a></li></ol></li></ol>
 </div>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<input type="button" id="tocButton" value="Hide"  title="Click to hide or show">
 
-<%- js('https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min') %>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
+    var valueHide = "Hide";
+    var valueShow = "Show";
 
     if ($(".left-col").is(":hidden")) {
         $("#tocButton").attr("value", valueShow);
@@ -260,23 +260,8 @@
     }
 </script>
 
-<% if (theme.toc_nowrap) { %>
-    <style>
-        .toc {
-            white-space: nowrap;
-            overflow-x: hidden;
-        }
-    </style>
 
-    <script>
-        $(document).ready(function() {
-            $(".toc li a").mouseover(function() {
-                var title = $(this).attr('href');
-                $(this).attr("title", title);
-            });
-        })
-    </script>
-<% } %>
+
 
 
 
