@@ -77,7 +77,7 @@
                         
                             <li><a href="/">Home</a></li>
                         
-                            <li><a href="/about">About</a></li>
+                            <li><a href="/2017/04/16/About-me/">About</a></li>
                         
                         </ul>
                     </nav>
@@ -124,7 +124,7 @@
                 
                     <li><a href="/">Home</a></li>
                 
-                    <li><a href="/about">About</a></li>
+                    <li><a href="/2017/04/16/About-me/">About</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -226,15 +226,15 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-Description"><span class="toc-number">1.</span> <span class="toc-text">Problem Description</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">2.</span> <span class="toc-text">Codes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Method-1-Recursive"><span class="toc-number">2.1.</span> <span class="toc-text">Method 1: Recursive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Method-2-Iterative"><span class="toc-number">2.2.</span> <span class="toc-text">Method 2: Iterative</span></a></li></ol></li></ol>
+    <strong class="toc-title">文章目录</strong>
+    <%- toc(post.content) %>
 </div>
-<input type="button" id="tocButton" value="Hide"  title="Click to hide or show">
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<%- js('https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min') %>
 <script>
-    var valueHide = "Hide";
-    var valueShow = "Show";
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
 
     if ($(".left-col").is(":hidden")) {
         $("#tocButton").attr("value", valueShow);
@@ -254,8 +254,23 @@
     }
 </script>
 
+<% if (theme.toc_nowrap) { %>
+    <style>
+        .toc {
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+    </style>
 
-
+    <script>
+        $(document).ready(function() {
+            $(".toc li a").mouseover(function() {
+                var title = $(this).attr('href');
+                $(this).attr("title", title);
+            });
+        })
+    </script>
+<% } %>
 
 
 
