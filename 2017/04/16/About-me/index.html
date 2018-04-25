@@ -9,7 +9,7 @@
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About Me">
-<meta property="og:url" content="https://mysite.com/2017/04/16/About-me/index.html">
+<meta property="og:url" content="https://xinli.jia.io/2017/04/16/About-me/index.html">
 <meta property="og:site_name" content="Xinli's Blog">
 <meta property="og:description" content="ProfileNameXinli Jia Emailxj2191@columbia.edu Tel(1)347-331-9714 Addr548 Riverside Dr, New York, NY 10027 EducationColumbia UniversityMS in Electrical EngineeringExpected Dec 2017 Shanghai Jiao Tong U">
 <meta property="og:updated_time" content="2017-04-17T06:11:43.000Z">
@@ -205,8 +205,8 @@
         <p><span>Post Time:</span>2017/04/16 - 21:05</p>
         <p><span>Last Update:</span>2017/04/16 - 23:11</p>
         <p>
-            <span>URL:</span><a class="post-url" href="/2017/04/16/About-me/" title="About Me">https://mysite.com/2017/04/16/About-me/</a>
-            <span class="copy-path" data-clipboard-text="Source: https://mysite.com/2017/04/16/About-me/　　Author: Xinli Jia" title="Copy page link"><i class="fa fa-clipboard"></i></span>
+            <span>URL:</span><a class="post-url" href="/2017/04/16/About-me/" title="About Me">https://xinli.jia.io/2017/04/16/About-me/</a>
+            <span class="copy-path" data-clipboard-text="Source: https://xinli.jia.io/2017/04/16/About-me/　　Author: Xinli Jia" title="Copy page link"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -270,25 +270,19 @@
     
 
 
-<% if (is_post()){ %>
+
     <div class="scroll" id="post-nav-button">
-        <% if (post.prev){ %>
-            <a href="<%- url_for(post.prev.path) %>" title="上一篇: <%= post.prev.title %>">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        <% } else { %>
-            <a href="<%- config.root %>" title="回到主页"><i class="fa fa-home"></i></a>
-        <% } %>
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        <% if (post.next){ %>
-            <a href="<%- url_for(post.next.path) %>" title="下一篇: <%= post.next.title %>">
+        
+            <a href="/" title="Back to Home"><i class="fa fa-home"></i></a>
+        
+        <a title="Article List"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/04/16/Leetcode-Note-101-Symmetric-Tree/" title="Next: Leetcode Note: 101 Symmetric Tree">
                 <i class="fa fa-angle-right"></i>
             </a>
-        <% } else { %>
-            <a href="<%- config.root %>" title="回到主页"><i class="fa fa-home"></i></a>
-        <% } %>
+        
     </div>
-    <%- list_posts({amount: 999}) %>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/04/24/Save-some-bunnies/">Saved some bunnies:)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/16/Leetcode-Note-101-Symmetric-Tree/">Leetcode Note: 101 Symmetric Tree</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/16/About-me/">About Me</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
@@ -307,7 +301,8 @@
             }
         })
     </script>
-<% } %>
+
+
 
 
     <script>
